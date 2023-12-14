@@ -1,12 +1,8 @@
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
-import { getFirestore, doc, onSnapshot } from 'firebase/firestore';
-import { getStorage } from 'firebase/storage';
-import { writable, derived } from 'svelte/store';
-import type { User } from 'firebase/auth';
-import type { Readable } from 'svelte/store';
-import { onAuthStateChanged } from 'firebase/auth';
-
+import { initializeApp } from "firebase/app";
+import { doc, getFirestore, onSnapshot } from "firebase/firestore";
+import { getAuth, onAuthStateChanged, type User } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+import { writable, type Readable, derived } from "svelte/store";
 
 const firebaseConfig = {
   apiKey: "AIzaSyDsDOujb18BsEuBKOSSC3vCxZWy4PMKkTQ",
@@ -18,17 +14,11 @@ const firebaseConfig = {
   measurementId: "G-220X6FSERF"
 };
 
-// ...
-
-// Rest of the code remains unchanged
-
-
-
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
-const storage = getStorage(app);
+export const app = initializeApp(firebaseConfig);
+export const db = getFirestore();
+export const auth = getAuth();
+export const storage = getStorage();
 
 
 /**
@@ -42,7 +32,7 @@ function userStore() {
     const { subscribe } = writable<User | null>(null);
     return {
       subscribe,
-    };
+    }
   }
 
   const { subscribe } = writable(auth?.currentUser ?? null, (set) => {

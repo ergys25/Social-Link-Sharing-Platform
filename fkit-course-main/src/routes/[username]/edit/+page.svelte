@@ -92,7 +92,7 @@
             href={`/${$userData?.username}`}
             class="link link-accent"
           >
-            https://kung.foo/{$userData?.username}
+            https://link-vine.com/{$userData?.username}
           </a>
         </p>
       </div>

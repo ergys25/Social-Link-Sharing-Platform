@@ -47,7 +47,7 @@
       links: [
         {
           title: "Test Link",
-          url: "https://kung.foo",
+          url: "Link-Vine.com",
           icon: "custom",
         },
       ],
@@ -68,7 +68,7 @@
       >
     </p>
     <p class="text-sm">(Usernames cannot be changed)</p>
-    <a class="btn btn-primary" href="/login/photo">Upload Profile Image</a>
+    <a class="btn btn-outline btn-secondary" href="/login/photo">Upload Profile Image</a>
   {:else}
     <form class="w-2/5" on:submit|preventDefault={confirmUsername}>
       <input
@@ -99,7 +99,7 @@
         {/if}
 
         {#if isAvailable}
-          <button class="btn btn-success">Confirm username @{username} </button>
+          <button class="btn btn-outline btn-success">Confirm username @{username} </button>
         {/if}
       </div>
     </form>

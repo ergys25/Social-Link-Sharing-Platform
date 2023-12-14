@@ -50,5 +50,5 @@
     </div>
   </form>
 
-  <a {href} class="btn btn-primary"> Finish </a>
+  <a {href} class="btn btn-outline btn-secondary"> Finish </a>
 </AuthCheck>
