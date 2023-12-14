@@ -1,6 +1,6 @@
 import { getAuth } from 'firebase-admin/auth';
 import { getFirestore } from 'firebase-admin/firestore';
-import { FB_CLIENT_EMAIL, FB_PRIVATE_KEY, FB_PROJECT_ID } from  'https://github.com/ergys25/Social-Link-Sharing-Platform/blob/e99b5b27043876582dd53d34cb98380cb10f00dc/fkit-course-main/.env'; 
+import { FB_CLIENT_EMAIL, FB_PRIVATE_KEY, FB_PROJECT_ID } from '$env/static/private'
 import pkg from 'firebase-admin';
 
 try {
