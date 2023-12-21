@@ -1,7 +1,6 @@
 
 
-- [Live Demo 🥋](https://kung.foo)
-
+https://social-link-sharing-platform.vercel.app/
 ## Usage
 
 ```
